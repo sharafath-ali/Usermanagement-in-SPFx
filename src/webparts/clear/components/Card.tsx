@@ -1,7 +1,8 @@
 import * as React from 'react';
 import styles from './Clear.module.scss';
 import { sp } from './sp';
-
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import { useNavigate } from 'react-router-dom';
 interface Props {
   keys: number;
   fn: string;
@@ -12,7 +13,7 @@ interface Props {
 }
 
 const Product: React.FC<Props> = ({  fn, ln, email, des ,Id,keys}) => {
-
+  const navigate = useNavigate();
   function Delete(){
     console.log(Id)
     sp.web.lists.getByTitle("users").items.getById((Id)).delete()
@@ -23,9 +24,11 @@ const Product: React.FC<Props> = ({  fn, ln, email, des ,Id,keys}) => {
     console.log(`Error deleting item: ${error}`);
   })}
 
+  function View(){
+    navigate(`employeedetail/${Id}`)
+  }
   
 function update(){
-  
   const updatedFields = {
     first_name:'',
     last_name: '',
@@ -44,12 +47,10 @@ sp.web.lists.getByTitle("users").items.getById(Id).update(updatedFields)
   .catch((error) => {
     console.log(`Error updating item: ${error}`);
   });
-
   }
-  
-  
   return (
     <div className={styles.card}>
+    <AccountBoxIcon sx={{ fontSize: 36 }} />
     <h1>{fn} {ln}</h1>
     <p className={styles.title}>{email}</p>
     <br/>
@@ -58,6 +59,7 @@ sp.web.lists.getByTitle("users").items.getById(Id).update(updatedFields)
     <button onClick={Delete}>Delete</button>
     <br/>
     <button onClick={update}>Update</button>
+    <button onClick={View}>View details</button>
   </div>
   );
 };

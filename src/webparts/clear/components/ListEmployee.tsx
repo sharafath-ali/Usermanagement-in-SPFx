@@ -2,12 +2,12 @@ import { useContext } from 'react'
 import { UserContext } from './context'
 import { SContext } from './searchcontext'
 import styles from './Clear.module.scss';
-import Product from './Product'
+import Product from './Card'
 import Section from './Section'
 import * as React from 'react'
 type Props = {}
 
-export default function Listpro({}: Props) {
+export default function Listemployees({}: Props) {
   const {users}=useContext(UserContext)
   console.log(users)
     const {filter}=useContext(SContext)

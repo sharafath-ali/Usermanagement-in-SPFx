@@ -19,7 +19,7 @@
     "@microsoft/sp-office-ui-fabric-core": "1.16.1",
     "@microsoft/sp-property-pane": "1.16.1",
     "@microsoft/sp-webpart-base": "1.16.1",
-    "@mui/icons-material": "^5.11.11",
+    "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.11.15",
     "@pnp/graph": "^3.13.0",
     "@pnp/sp": "^3.13.0",

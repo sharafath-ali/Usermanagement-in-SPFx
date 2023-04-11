@@ -2,17 +2,14 @@ import * as React from 'react';
 import  { useState } from 'react'
 import { IconButton } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import styles from './Clear.module.scss';
 import { useContext } from 'react';
 import { UserContext } from './context';
 import { sp } from './sp';
 
-
-
-
 interface User {
-    first_name: string;
+    first_name: string;  
     last_name: string;
     email: string;
     designation: string;
@@ -44,7 +41,8 @@ interface User {
         
     }
   
-    return (
+    return (<>
+    
       <div className={styles.container}>
         <IconButton onClick={handleClick}><ArrowBackIcon />BACK</IconButton>
   
@@ -63,6 +61,7 @@ interface User {
         <button type="submit"  onClick={save}>Save info</button>
   
       </div>
+      </>
     )
   }
   
