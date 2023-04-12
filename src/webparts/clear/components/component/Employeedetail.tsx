@@ -19,7 +19,6 @@ export default function  Employeedetail (props: IProps){
     navigate(`/employeedetail/${Number(id)}`);
   }*/}
   useEffect(() => {
-    
     async function getuser() {
       const item: any =await sp.web.lists.getByTitle('users').items.getById(Number(id))()
       console.log('item=',item)
@@ -44,14 +43,17 @@ if(!data) return <>loading...</>
       </div>*/}
       <Link className={styles.button1} to={`/`}>
         Home
-    </Link>
+     </Link>
       <Link className={styles.button1} to={`/employeedetail/${Number(id)}`}>
-        Profile
+        Profile 
       </Link>
       <Link className={styles.button1} to={`/Documents/${Number(id)}`}>
         Documents
       </Link>
     </div><div className={styles.employcontainer}>
+      <div className={styles.image}>
+       <img src={`${data?.Image_url}`} alt="Employee"/>
+      </div>
         <h1>Name: <span className={styles.space}>{data?.first_name} {data?.last_name}</span></h1>
         <h2>Designation: <span className={styles.space}>{data?.designation}</span></h2>
         <h2>Email: <span className={styles.space}>{data?.email}</span></h2>
