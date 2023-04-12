@@ -9,7 +9,7 @@ type Props = {}
 
 export default function Listemployees({}: Props) {
   const {users}=useContext(UserContext)
-  console.log(users)
+  console.log(users,'user')
     const {filter}=useContext(SContext)
   return (
     <>
@@ -17,8 +17,8 @@ export default function Listemployees({}: Props) {
     <div className={styles.Listing}>
      {
       
-     users.filter((user: {first_name: string, last_name: string, email: string, designation: string,Id:number}) => user.first_name.toLowerCase().includes(filter)).map((user: {first_name: string, last_name: string, email: string, designation: string ,Id:number}, index: number) => {
-     return <Product keys={index} fn={user.first_name} ln={user.last_name} email={user.email} des={user.designation} Id={user.Id} />
+     users.filter((user: {first_name: string, last_name: string, email: string, designation: string,Id:number}) => user.first_name.toLowerCase().includes(filter)).map((user: {first_name: string, last_name: string, email: string, designation: string ,Id:number,Image_url:string}, index: number) => {
+     return <Product keys={index} fn={user.first_name} ln={user.last_name} email={user.email} des={user.designation} Id={user.Id} Image_url={user.Image_url} />
      }) 
      }
     </div>

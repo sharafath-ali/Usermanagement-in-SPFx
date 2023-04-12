@@ -21,7 +21,8 @@ const UserProvider = (Props: Props) => {
       last_name:item.last_name,
       email: item.email,
       designation: item.designation,
-      Id: item.Id
+      Id: item.Id,
+      Image_url:item.Image_url
        }));
       setusers(newUsers);
       

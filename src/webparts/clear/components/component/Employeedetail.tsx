@@ -42,6 +42,9 @@ if(!data) return <>loading...</>
       {/*<div className={styles.button1}  onClick={handleClick} >
         Profile
       </div>*/}
+      <Link className={styles.button1} to={`/`}>
+        Home
+    </Link>
       <Link className={styles.button1} to={`/employeedetail/${Number(id)}`}>
         Profile
       </Link>
@@ -53,7 +56,6 @@ if(!data) return <>loading...</>
         <h2>Designation: <span className={styles.space}>{data?.designation}</span></h2>
         <h2>Email: <span className={styles.space}>{data?.email}</span></h2>
       </div>
-      
       </>
   )
 }

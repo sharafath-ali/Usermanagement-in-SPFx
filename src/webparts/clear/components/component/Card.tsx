@@ -10,9 +10,10 @@ interface Props {
   email: string;
   des: string;
   Id:number
+  Image_url:string
 }
 
-const Product: React.FC<Props> = ({  fn, ln, email, des ,Id,keys}) => {
+const Product: React.FC<Props> = ({  fn, ln, email, des ,Id,Image_url,keys}) => {
   const navigate = useNavigate();
   function Delete(){
     console.log(Id)
@@ -51,6 +52,9 @@ sp.web.lists.getByTitle("users").items.getById(Id).update(updatedFields)
   return (
     <div className={styles.card}>
     <AccountBoxIcon sx={{ fontSize: 36 }} />
+    <div className={styles.image}>
+     <img src={`${Image_url}`} alt="Employee"/>
+    </div>
     <h1>{fn} {ln}</h1>
     <p className={styles.title}>{email}</p>
     <br/>
