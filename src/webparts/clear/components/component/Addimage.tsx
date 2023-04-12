@@ -5,13 +5,14 @@ import "@pnp/sp/files";
 import "@pnp/sp/folders";
 import { sp } from '../sp';
 import styles from '../Clear.module.scss';
-
+import { useNavigate } from 'react-router-dom';
 interface IFileUploadProps {
   id: string;
 }
 
 const AddImage: React.FC<IFileUploadProps> = ({id}) => {
-    const emplyeeId = parseInt(id)
+  const navigate = useNavigate();
+  const emplyeeId = parseInt(id)
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   console.log(id)
 
@@ -46,6 +47,7 @@ const AddImage: React.FC<IFileUploadProps> = ({id}) => {
   list.items.getById(emplyeeId).update({
      Image_url:url
    });
+   navigate('/')
   };
 
   return (
