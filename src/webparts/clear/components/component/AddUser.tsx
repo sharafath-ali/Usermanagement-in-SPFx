@@ -31,14 +31,24 @@ interface User {
       const newUser: User = { first_name: fn, last_name: ln, email: email , designation : des};
       setusers([...users, newUser]);
       navigate('/');
-      sp.web.lists.getByTitle("users").items.add(newUser)
+     sp.web.lists.getByTitle("users").items.add(newUser)
      .then((result) => {
       console.log(`New item added successfully with ID: ${result.data.Id}`);
+      const folderName = result.data.Id
+      const documentLibraryName = "EmployeeLibrary";
+      const newFolderName =  `${folderName}`;
+      const documentLibrary = sp.web.lists.getByTitle(documentLibraryName);
+      documentLibrary.rootFolder.folders.addUsingPath(newFolderName)
+     .then(() => {
+      console.log(`Folder '${newFolderName}' created successfully.`);
+     })
+     .catch((error) => {
+      console.error(`Error creating folder: ${error}`);
+     });
      })
     .catch((error) => {
      console.log(`Error adding new item: ${error}`);
      });
-        
     }
   
     return (<>

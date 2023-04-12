@@ -12,14 +12,14 @@ export default function Documentsfolder (props: IProps){
   console.log(id)
   return (
     <><div className={styles.section2}>
-      <Link className={styles.button1} to={`/employeedetail/${Number(id)}`}>
-        Profile
-      </Link>
+     { <Link className={styles.button1} to={`/`}>
+        Home
+  </Link>}
       <Link className={styles.button1} to={'/Documents'}>
         Documents
       </Link>
     </div>
-<UploadAndDisplayImage/>
+    <UploadAndDisplayImage/>
     </>
   );
 }
