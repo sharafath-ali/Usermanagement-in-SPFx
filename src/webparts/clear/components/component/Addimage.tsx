@@ -51,7 +51,6 @@ const AddImage: React.FC<IFileUploadProps> = ({id}) => {
   };
 
   return (
-    
    <div className={styles.uploadcontainer}>
       <input type="file" onChange={handleFileInputChange} />
       <button onClick={handleUploadClick}>Upload</button>
@@ -62,8 +61,6 @@ const AddImage: React.FC<IFileUploadProps> = ({id}) => {
         </div>
       )}
     </div>
-
-
   );
 };
 

@@ -38,6 +38,7 @@ if(!data) return <>loading...</>
 
   return (
     <><div className={styles.section2}>
+      <h1>Profile</h1>
       {/*<div className={styles.button1}  onClick={handleClick} >
         Profile
       </div>*/}
@@ -58,6 +59,7 @@ if(!data) return <>loading...</>
         <h2>Designation: <span className={styles.space}>{data?.designation}</span></h2>
         <h2>Email: <span className={styles.space}>{data?.email}</span></h2>
       </div>
+      <p style={{textAlign:'center'}}>all copyright reserved</p>
       </>
   )
 }

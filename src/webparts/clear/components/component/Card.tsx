@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styles from '../Clear.module.scss';
 import { sp } from '../sp';
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
+
 import { useNavigate } from 'react-router-dom';
 interface Props {
   keys: number;
@@ -51,8 +51,8 @@ sp.web.lists.getByTitle("users").items.getById(Id).update(updatedFields)
   }
   return (
     <div className={styles.card}>
-    <AccountBoxIcon sx={{ fontSize: 36 }} />
-    <div className={styles.image}>
+    
+    <div className={styles.image1}>
      <img src={`${Image_url}`} alt="Employee"/>
     </div>
     <h1>{fn} {ln}</h1>
