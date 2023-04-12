@@ -21,7 +21,7 @@ export default function App({}: Props) {
     <Routes>
      <Route path='/' element={<Listemployees />} />
      <Route path='/add' element={<Add />} />
-     <Route path='/Documents' element={<Documentsfolder />} />
+     <Route path='/Documents/:id' element={<Documentsfolder />} />
      <Route path='employeedetail/:id' element={<Employeedetail/>} />
     </Routes>
     </HashRouter>

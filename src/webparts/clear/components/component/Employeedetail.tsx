@@ -4,6 +4,7 @@ import { sp } from '../sp';
 import { useEffect, useState } from 'react';
 import styles from '../Clear.module.scss';
 
+
 export interface IProps {
 
 }
@@ -44,13 +45,15 @@ if(!data) return <>loading...</>
       <Link className={styles.button1} to={`/employeedetail/${Number(id)}`}>
         Profile
       </Link>
-      <Link className={styles.button1} to={'/Documents'}>
+      <Link className={styles.button1} to={`/Documents/${Number(id)}`}>
         Documents
       </Link>
     </div><div className={styles.employcontainer}>
         <h1>Name: <span className={styles.space}>{data?.first_name} {data?.last_name}</span></h1>
         <h2>Designation: <span className={styles.space}>{data?.designation}</span></h2>
         <h2>Email: <span className={styles.space}>{data?.email}</span></h2>
-      </div></>
+      </div>
+      
+      </>
   )
 }
