@@ -5,8 +5,6 @@ const UploadAndDisplayImage: React.FC = () => {
 
   return (
     <div>
-      
-
       {selectedImage && (
         <div>
           <img

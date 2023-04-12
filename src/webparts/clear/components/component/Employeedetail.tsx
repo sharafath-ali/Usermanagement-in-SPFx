@@ -1,22 +1,22 @@
 import * as React from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import { sp } from './sp';
+import { Link, useParams } from 'react-router-dom';
+import { sp } from '../sp';
 import { useEffect, useState } from 'react';
-import styles from './Clear.module.scss';
+import styles from '../Clear.module.scss';
 
 export interface IProps {
 
 }
 export default function  Employeedetail (props: IProps){
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const [data, setdata] = useState<any>()
   // const [name, setname] = useState('')
   // const [des, setdes] = useState('')
   // const [email, setemail] = useState('')
   let {id} = useParams();
-  function handleClick() {
+  {/*function handleClick() {
     navigate(`/employeedetail/${Number(id)}`);
-  }
+  }*/}
   useEffect(() => {
     
     async function getuser() {
@@ -38,9 +38,9 @@ if(!data) return <>loading...</>
 
   return (
     <><div className={styles.section2}>
-      <div className={styles.button1}  onClick={handleClick} >
+      {/*<div className={styles.button1}  onClick={handleClick} >
         Profile
-      </div>
+      </div>*/}
       <Link className={styles.button1} to={`/employeedetail/${Number(id)}`}>
         Profile
       </Link>

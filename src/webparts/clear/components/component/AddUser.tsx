@@ -3,10 +3,10 @@ import  { useState } from 'react'
 import { IconButton } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {  useNavigate } from "react-router-dom";
-import styles from './Clear.module.scss';
+import styles from '../Clear.module.scss';
 import { useContext } from 'react';
-import { UserContext } from './context';
-import { sp } from './sp';
+import { UserContext } from '../context/context';
+import { sp } from '../sp';
 
 interface User {
     first_name: string;  

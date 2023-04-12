@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import { UserContext } from './context'
-import { SContext } from './searchcontext'
-import styles from './Clear.module.scss';
+import { UserContext } from '../context/context'
+import { SContext } from '../context/searchcontext'
+import styles from '../Clear.module.scss';
 import Product from './Card'
 import Section from './Section'
 import * as React from 'react'

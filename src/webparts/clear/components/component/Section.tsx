@@ -1,7 +1,7 @@
-import styles from './Clear.module.scss';
+import styles from '../Clear.module.scss';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SContext } from './searchcontext';
+import { SContext } from '../context/searchcontext';
 import * as React from 'react';
 
 const Section: React.FC = () => {

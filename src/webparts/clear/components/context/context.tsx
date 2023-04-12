@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import * as React from 'react';
 import { useState } from "react";
-import { sp } from "./sp";
+import { sp } from "../sp";
 
 
 

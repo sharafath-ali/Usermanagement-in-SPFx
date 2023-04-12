@@ -1,6 +1,6 @@
 import * as React from 'react';
-import styles from './Clear.module.scss';
-import { sp } from './sp';
+import styles from '../Clear.module.scss';
+import { sp } from '../sp';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import { useNavigate } from 'react-router-dom';
 interface Props {
